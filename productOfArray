@@ -1,0 +1,7 @@
+function productOfArray(arr){
+    if(arr.length ===1) return arr[0];
+    arr[arr.length - 2] = arr[arr.length-1]*arr[arr.length-2];
+    arr.pop();
+    return productOfArray(arr);
+}
+productOfArray([1,2,3,29]);
