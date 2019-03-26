@@ -1,0 +1,11 @@
+function AB(a,b){
+    return a+b;
+}
+function HOFAB(x, cb){
+    if(x ==  0 ){
+        return cb(10,10);
+    }else{
+        return cb(11,10);
+    }
+}
+HOFAB(0,AB);
