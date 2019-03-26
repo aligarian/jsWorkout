@@ -1,0 +1,85 @@
+//Script one
+const FOO={
+    num:1,
+    toString:function(){
+        return FOO.num++;
+    }
+}
+if(FOO==1 && FOO == 2 && FOO == 3){
+    console.log('PASS')
+}
+//Script 2
+function act(a=10,b=5,c){
+    return a + b + c;
+}
+console.log(act(10));
+
+//script 3
+var arr = new Array();
+var arr1 = [1,2,3,4,5,6,7,8,9,10];
+const newArr = [1,2,3,4,5];
+
+    try{
+        newArr = arr;
+    }catch(err){
+        arr1.forEach(function(e){
+            if(e % 5 === 0 ){
+                arr.push(e);
+            }
+        })
+    }
+
+console.log(arr);
+
+//script 4
+var n =6;
+var foo ={
+    n:7,
+    d:function(){
+        console.log(this.n);
+    }
+}
+foo.d();
+var f = foo.d();
+
+
+//script 5
+function mergeArray(x=[{id:1},{id:3},{id:5},{id:6}], y=[{id:2},{id:4},{id:6},{id:1}]){
+    let a =[];
+    let b=[]
+    let ret = [];
+    for(let k in x){
+        a.push(x[k].id);
+    }
+    for(let i in y){
+        b.push(y[i].id);
+    }
+    let final = [...new Set([...a ,...b])]; 
+    for(let j =0;j<final.length;j++){
+        ret.push({'id':final[j]});
+    }
+    return ret.sort((a,b)=>{return a.id - b.id});
+}
+mergeArray();
+
+//script 6
+var json = {1:3};
+
+console.log(json)
+
+//script 7
+var a=10;
+var a=20;
+var a = function(){
+    return 30;
+}
+console.log(a())
+
+//script 8
+
+//script 9
+console.log(JSON.stringify({name:"DAVID"}));
+
+
+
+
