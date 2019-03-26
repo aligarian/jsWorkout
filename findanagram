@@ -1,0 +1,28 @@
+function findanagram(str1, str2){
+    if(str1.length != str2.length){
+        return false;
+    }
+    var fc1 ={};
+    var fc2={};
+    for(var i=0; i<str1.length;i++){
+        fc1[str1[i]] = (fc1[str1[i]] || 0) +1;
+    }
+    for(var j=0; j<str2.length;j++){
+        fc2[str2[j]] = (fc2[str2[j]] || 0) +1;
+    }
+    console.log(fc1);
+    console.log(fc2);
+    for(let key in fc1){
+       if(!(key in fc2)){
+           return false;
+       }
+       if(fc1[key] != fc2[key]){
+           return false;
+       }
+
+    }
+    return true;
+}
+var s1= 'rat';
+var s2= 'car';
+console.log(findanagram(s1,s2));
