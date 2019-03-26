@@ -1,0 +1,10 @@
+function flatten(arr){
+   if(Array.isArray(arr[arr.length -1])){
+        flatten(arr[arr.length -1]);
+   }else{
+       return flatten(arr[arr.length -1]);
+   }
+   
+    return arr;
+}
+flatten([1, 2, 3, [4, 5] ])
