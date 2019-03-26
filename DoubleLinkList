@@ -1,0 +1,43 @@
+class Node{
+    constructor(val, prev=null, next=null){
+        this.val = val;
+        this.prev= prev;
+        this.next=next;
+    }
+}
+class DoubleLinkedList{
+    constructor(){
+        this.head = null;
+        this.tail = null;
+        this.length = 0;
+    }
+    traverse(){
+        let current = this.head;
+        while(current){
+            console.log(current);
+            current = this.head.next;
+        }
+    }
+    push(val){
+        var newNode =  new Node(val);
+        if(this.head === null){
+            this.head = newNode;
+            this.tail = this.head;
+
+
+        }else{
+            this.tail.next = newNode;
+            newNode.prev = this.tail;
+            this.tail= newNode;
+
+        }
+        this.length++;
+        return this;
+    }
+}
+var list = new DoubleLinkedList();
+list.push(3);
+list.push(6)
+list.push(5)
+list.push(4)
+
