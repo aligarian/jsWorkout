@@ -1,0 +1,17 @@
+function substr(str, sub){
+   let i = 0;
+   let j = 0;
+   let k= 0;
+   while(i < str.length){
+        if(str[i] === sub[j]){
+            if(j === (sub.length-1))return k;
+            i++;
+            j++;
+        }else{
+            j =0;
+            k++;
+            i =k;
+        }
+   }
+}
+console.log(substr('lofar lolarid', 'lol'));
