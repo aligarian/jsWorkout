@@ -1,0 +1,12 @@
+var mul = (function(x){
+    return (function(y){
+        return (function(z){
+            return x * y * z;
+        })
+    })
+});
+mul(2)(3)(4);
+
+var a ={}, b ={key:'b'}, c={key:'c'};
+a[b]=123;
+console.log(a);
