@@ -1,0 +1,27 @@
+// 1. Code runs as you type: edit message
+let num = 99;
+
+function dec2bin(dec){
+    return (dec >>> 0).toString(2);
+}
+function zeros(num){
+  let bin = dec2bin(num);
+  console.log(bin);
+  let p =0;
+  let k =0;
+  let max =0;
+  while(k < bin.length){
+    if(bin[k]==1){
+      if((k-p)>max){
+        max=(k-p);
+      }
+      p=k;
+    }
+    k =k+1;
+  }
+  return max-1;
+}
+
+
+  
+console.log(zeros(num))
