@@ -1,0 +1,41 @@
+//p   a   h   n
+//a p l s i i g
+//y   i   r
+// pahnaplsiigyir
+function zigzag(str, r){
+  let pa = [];
+  for(let i=0;i<r;i++){
+    pa[i]='';
+  } 
+  let p1=0;
+  let p2=0;
+  let p3=(r-1);
+  let f = true;
+  while(p1<str.length){
+    //pa[p2]=str[p1];
+    if(f){
+      pa[p2]=pa[p2]+str[p1];
+      p2++;
+      
+    }
+    if(!f){
+      pa[p3]=pa[p3]+str[p1];
+      p3--;
+      
+    }
+    if(p2===(r-1)){
+        p2=0;
+        f = false;
+      }
+    if(p3===0){
+        p3=r-1;
+        f=true;
+      }
+    p1++;
+    
+  }
+  
+  return pa.join('');
+}
+console.log(zigzag('paypalishiring',3))
+// outpt 'pahnaplsiigyir'
