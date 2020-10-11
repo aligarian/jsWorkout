@@ -1,0 +1,24 @@
+function longestCommonPrefix(arr){
+    let p1 = 0;
+    let p2 = 0;
+    let com='';
+    let p3=0;
+    let result=arr[p1];
+    while(p3<arr.length-1){
+        if(result[p1]===arr[p3+1][p2] ){
+            com = com + arr[p3+1][p2];
+            p1++;
+            p2++;
+        }else{
+            result=com;
+            com='';
+            p3++;
+            p2=0;
+            p1=0;
+        }
+    }
+    return result;
+   }
+
+   
+console.log(longestCommonPrefix(['abcdefghi','abcdklpon','abcoieru','abdskjflj']));
