@@ -1,0 +1,18 @@
+// output of function
+//.    #
+//.   ##
+//.  ###
+//. ####
+function staircase(n) {
+    //let resultArr=[];
+    for(let i=1,j=n-1; i<n, j>=0;i++,j--){
+        let str='';
+        for(let k=0;k<j;k++){
+            str = str + ' ';
+        }
+        for(let k=0;k<i;k++){
+            str = str + '#';
+        }
+        console.log(str);
+    }   
+}
